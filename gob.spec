@@ -8,7 +8,7 @@ Group:		Development/Tools
 Group(de):	Entwicklung/Werkzeuge
 Group(fr):	Development/Outils
 Group(pl):	Programowanie/Narzêdzia
-Source0:	http://ftp.5z.com/pub/gob/%{name}-%{version}.tar.gz
+Source0:	ftp://ftp.5z.com/pub/gob/%{name}-%{version}.tar.gz
 URL:		http://www.5z.com/jirka/gob.html
 BuildRequires:	glib-devel >= 1.2.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
