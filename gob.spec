@@ -1,10 +1,11 @@
 Summary:	GOB, The GTK+ Object Builder
 Summary(pl):	GOB, Budowniczy obiektów GTK+
 Name:		gob
-Version:	1.0.4
+Version:	1.0.5
 Release:	1
 License:	GPL
 Group:		Development/Tools
+Group(de):	Entwicklung/Werkzeuge
 Group(fr):	Development/Outils
 Group(pl):	Programowanie/Narzêdzia
 Source0:	http://ftp.5z.com/pub/gob/%{name}-%{version}.tar.gz
@@ -32,13 +33,14 @@ pewnego stopnia inspirowana Jav± i Yaccem.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_prefix}/src/examples/%{name}-%{version}
+install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
 	m4dir=%{_aclocaldir}
 
-install examples/* $RPM_BUILD_ROOT%{_prefix}/src/examples/%{name}-%{version}
+install examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
+
 gzip -9nf README AUTHORS NEWS TODO ChangeLog \
 	$RPM_BUILD_ROOT%{_mandir}/*/*
 
@@ -51,4 +53,4 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man1/*
 %{_aclocaldir}/*
-%{_prefix}/src/examples/%{name}-%{version}
+%{_examplesdir}/%{name}-%{version}
