@@ -1,6 +1,6 @@
 Summary:	GOB, The GTK+ Object Builder
 Name:		gob
-Version:	0.92.3
+Version:	0.93.0
 Release:	1
 License:	GPL
 Group:		Development/Tools
@@ -9,6 +9,8 @@ Source0:	http://ftp.5z.com/pub/gob/%{name}-%{version}.tar.gz
 URL:		http://www.5z.com/jirka/gob.html
 BuildRequires:	glib-devel >= 1.2.0
 BuildRoot:	/tmp/%{name}-%{version}-root
+
+%define		_aclocaldir	%(aclocal --print-ac-dir)
 
 %description
 GOB is a simple preprocessor for making GTK+ objects. It makes objects
@@ -25,7 +27,9 @@ make
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT/usr/src/examples/%{name}-%{version}
 
-make DESTDIR=$RPM_BUILD_ROOT install
+make install \
+	DESTDIR=$RPM_BUILD_ROOT \
+	m4dir=%{_aclocaldir}
 
 install examples/* $RPM_BUILD_ROOT/usr/src/examples/%{name}-%{version}
 gzip -9nf README AUTHORS NEWS TODO ChangeLog \
@@ -39,5 +43,5 @@ rm -rf $RPM_BUILD_ROOT
 %doc *.gz
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man1/*
-%{_datadir}/aclocal/*
+%{_aclocaldir}/*
 /usr/src/examples/%{name}-%{version}
