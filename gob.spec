@@ -1,4 +1,5 @@
 Summary:	GOB, The GTK+ Object Builder
+Summary(pl):	GOB, Budowniczy obiektów GTK+
 Name:		gob
 Version:	0.93.3
 Release:	1
@@ -14,6 +15,12 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 GOB is a simple preprocessor for making GTK+ objects. It makes objects
 from a single file which has inline C code so that you don't have to edit
 the generated files.  Syntax is somewhat inspired by java and yacc.
+
+%description -l pl
+GOB jest prostym preprocesorem s³u¿±cym do tworzenia obiektów GTK+. Tworzy
+on obiekty z pojedynczego pliku posiadaj±cego wbudowany kod C, dlatego
+nie musi siê edytowaæ wygenerowanych plików. Sk³adnia jest do pewnego
+stopnia inspirowana Jav± i Yaccem.
 
 %prep
 %setup -q
