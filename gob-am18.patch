@@ -1,0 +1,11 @@
+--- gob-1.0.12/gob.m4.orig	2000-08-07 07:20:51.000000000 +0200
++++ gob-1.0.12/gob.m4	2003-12-30 04:46:51.546221424 +0100
+@@ -4,7 +4,7 @@
+ dnl
+ 
+ 
+-AC_DEFUN(GOB_HOOK,[
++AC_DEFUN([GOB_HOOK],[
+ 	AC_PATH_PROG(GOB,gob)
+ 	if test ! x$GOB = x; then	
+ 		if test ! x$1 = x; then 
