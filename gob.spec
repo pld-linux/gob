@@ -8,7 +8,7 @@ Group(pl):	Programowanie/Narzêdzia
 Source0:	http://ftp.5z.com/pub/gob/%{name}-%{version}.tar.gz
 URL:		http://www.5z.com/jirka/gob.html
 BuildRequires:	glib-devel >= 1.2.0
-BuildRoot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_aclocaldir	%(aclocal --print-ac-dir)
 
