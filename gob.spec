@@ -1,15 +1,16 @@
 Summary:	GOB, The GTK+ Object Builder
-Summary(pl):	GOB, Budowniczy obiektów GTK+
+Summary(pl):	GOB - budowniczy obiektów GTK+
 Name:		gob
 Version:	1.0.12
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Tools
 Source0:	ftp://ftp.5z.com/pub/gob/%{name}-%{version}.tar.gz
 # Source0-md5:	573706a03ff6696ee5b6ab3fbbd17d67
 Patch0:		%{name}-am15.patch
+Patch1:		%{name}-am18.patch
 URL:		http://www.5z.com/jirka/gob.html
-BuildRequires:	autoconf
+BuildRequires:	autoconf >= 2.2
 BuildRequires:	automake
 BuildRequires:	flex
 BuildRequires:	glib-devel >= 1.2.0
@@ -30,9 +31,9 @@ jest do pewnego stopnia inspirowana Jav± i yaccem.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %build
-rm -f missing
 %{__aclocal}
 %{__autoconf}
 %{__automake}
