@@ -6,6 +6,7 @@ Release:	1
 License:	GPL
 Group:		Development/Tools
 Source0:	ftp://ftp.5z.com/pub/gob/%{name}-%{version}.tar.gz
+# Source0-md5:	573706a03ff6696ee5b6ab3fbbd17d67
 Patch0:		%{name}-am15.patch
 URL:		http://www.5z.com/jirka/gob.html
 BuildRequires:	autoconf
