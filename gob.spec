@@ -9,8 +9,11 @@ Source0:	http://ftp.5z.com/pub/gob/%{name}-%{version}.tar.gz
 Url:		http://www.5z.com/jirka/gob.html
 BuildRoot:	/tmp/%{name}-%{version}-root
 
+%define		_prefix		/usr/X11R6
+%define		_mandir		%{_prefix}/man
+
 %description
-GOB is a simple preprocessor for making GTK+ objects.  It makes objects
+GOB is a simple preprocessor for making GTK+ objects. It makes objects
 from a single file which has inline C code so that you don't have to edit
 the generated files.  Syntax is somewhat inspired by java and yacc.
 
