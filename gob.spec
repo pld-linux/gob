@@ -1,6 +1,6 @@
 Summary:	GOB, The GTK+ Object Builder
 Name:		gob
-Version:	0.93.2
+Version:	0.93.3
 Release:	1
 License:	GPL
 Group:		Development/Tools
@@ -9,8 +9,6 @@ Source0:	http://ftp.5z.com/pub/gob/%{name}-%{version}.tar.gz
 URL:		http://www.5z.com/jirka/gob.html
 BuildRequires:	glib-devel >= 1.2.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
-%define		_aclocaldir	%(aclocal --print-ac-dir)
 
 %description
 GOB is a simple preprocessor for making GTK+ objects. It makes objects
