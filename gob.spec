@@ -17,14 +17,14 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 GOB is a simple preprocessor for making GTK+ objects. It makes objects
 from a single file which has inline C code so that you don't have to
-edit the generated files. Syntax is somewhat inspired by java and
+edit the generated files. Syntax is somewhat inspired by Java and
 yacc.
 
 %description -l pl
 GOB jest prostym preprocesorem s³u¿±cym do tworzenia obiektów GTK+.
-Tworzy on obiekty z pojedynczego pliku posiadaj±cego wbudowany kod C,
-dlatego nie musi siê edytowaæ wygenerowanych plików. Sk³adnia jest do
-pewnego stopnia inspirowana Jav± i Yaccem.
+Tworzy on obiekty z pojedynczego pliku zawieraj±cego wbudowany kod C,
+dziêki czemu nie trzeba modyfikowaæ wygenerowanych plików. Sk³adnia
+jest do pewnego stopnia inspirowana Jav± i yaccem.
 
 %prep
 %setup -q
