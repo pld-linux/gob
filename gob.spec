@@ -5,9 +5,6 @@ Version:	1.0.12
 Release:	1
 License:	GPL
 Group:		Development/Tools
-Group(de):	Entwicklung/Werkzeuge
-Group(fr):	Development/Outils
-Group(pl):	Programowanie/Narzêdzia
 Source0:	ftp://ftp.5z.com/pub/gob/%{name}-%{version}.tar.gz
 Patch0:		%{name}-am15.patch
 URL:		http://www.5z.com/jirka/gob.html
