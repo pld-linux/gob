@@ -48,14 +48,12 @@ install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 install examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
-gzip -9nf README AUTHORS NEWS TODO ChangeLog
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc README AUTHORS NEWS TODO ChangeLog
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man1/*
 %{_aclocaldir}/*
