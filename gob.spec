@@ -5,8 +5,8 @@ Release:	1
 License:	GPL
 Group:		Development/Tools
 Group(pl):	Programowanie/Narzêdzia
-Source0:	%{name}-%{version}.tar.gz
-Url:		http://www.5z.com/jirka/linux.html#gob
+Source0:	http://ftp.5z.com/pub/gob/%{name}-%{version}.tar.gz
+Url:		http://www.5z.com/jirka/gob.html
 BuildRoot:	/tmp/%{name}-%{version}-root
 
 %description
@@ -22,19 +22,21 @@ make
 
 %install
 rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT/usr/src/examples/%{name}-%{varsion}
 
 make DESTDIR=$RPM_BUILD_ROOT install
 
-gzip -9nf README AUTHORS COPYING NEWS TODO ChangeLog \
-    $RPM_BUILD_ROOT%{_mandir}/*/* examples/*
+install examples/* $RPM_BUILD_ROOT/usr/src/examples/%{name}-%{varsion}
+gzip -9nf README AUTHORS NEWS TODO ChangeLog \
+	$RPM_BUILD_ROOT%{_mandir}/*/*
 
 %clean
 rm -rf $RPM_BUILD_ROOT 
 
 %files
 %defattr(644,root,root,755)
-%doc {README,AUTHORS,COPYING,NEWS,TODO,ChangeLog}.gz
-%doc examples
+%doc *.gz
 %attr(755,root,root) %{_bindir}/*
-%{_mandir}/man1/*.gz
+%{_mandir}/man1/*
 %{_datadir}/aclocal/*
+/usr/src/examples/%{name}-%{varsion}
