@@ -1,0 +1,36 @@
+--- gob-1.0.10/src/Makefile.am~	Mon Sep 10 05:46:11 2001
++++ gob-1.0.10/src/Makefile.am	Mon Sep 10 05:47:28 2001
+@@ -1,13 +1,11 @@
+ #YACCFLAGS += -d -t
+-YFLAGS += -d -t
++YFLAGS = -d -t
+ SUBDIRS =
+ 
+-CFLAGS += -Wall -Wpointer-arith -Wmissing-prototypes -Wmissing-declarations
++INCLUDES = $(GLIB_CFLAGS) -I$(includedir)
+ 
+-INCLUDES = @GLIB_CFLAGS@ -I$(includedir)
+-
+-bin_PROGRAMS = @DOINSTGOB@
+-noinst_PROGRAMS = @NOINSTGOB@
++bin_PROGRAMS = $(DOINSTGOB)
++noinst_PROGRAMS = $(NOINSTGOB)
+ EXTRA_PROGRAMS = gob
+ 
+ BUILT_SOURCES = parse.h parse.c lexer.c
+@@ -29,12 +27,12 @@
+ gob_LDADD = \
+ 	-lm \
+ 	$(GLIB_LIBS) \
+-	@LEXLIB@
++	$(LEXLIB)
+ 
+ # we might want popt back in the future
+-#	@POPT_LIB@
++#	$(POPT_LIB)
+ 
+-CLEANFILES += $(BUILT_SOURCES) gtk-weird-button.* gtk-weird-button-private.h
++CLEANFILES = $(BUILT_SOURCES) gtk-weird-button.* gtk-weird-button-private.h
+ 
+ EXTRA_DIST = $(BUILT_SOURCES) test.gob generate_treefuncs.pl treefuncs.def
+ 
