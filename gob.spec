@@ -1,7 +1,7 @@
 Summary:	GOB, The GTK+ Object Builder
 Summary(pl):	GOB, Budowniczy obiektów GTK+
 Name:		gob
-Version:	1.0.7
+Version:	1.0.8
 Release:	1
 License:	GPL
 Group:		Development/Tools
