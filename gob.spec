@@ -28,6 +28,9 @@ pewnego stopnia inspirowana Jav± i Yaccem.
 %prep
 %setup -q
 %build
+aclocal
+autoconf
+automake -a -c
 %configure
 %{__make}
 
