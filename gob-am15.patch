@@ -1,6 +1,6 @@
---- gob-1.0.12/src/Makefile.am.orig	Sun Oct 21 10:36:43 2001
-+++ gob-1.0.12/src/Makefile.am	Mon Feb  4 05:25:26 2002
-@@ -1,15 +1,11 @@
+--- gob-1.0.12/src/Makefile.am~	Sun Oct 21 10:36:43 2001
++++ gob-1.0.12/src/Makefile.am	Mon Feb  4 06:46:29 2002
+@@ -1,15 +1,13 @@
  #YACCFLAGS += -d -t
 -YFLAGS += -d -t
 +YFLAGS = -d -t
@@ -10,7 +10,8 @@
 +INCLUDES = $(GLIB_CFLAGS) -I$(includedir)
  
 -CFLAGS += -DPKGDATADIR=\"$(pkgdatadir)\"
--
++AM_CFLAGS = -DPKGDATADIR=\"$(pkgdatadir)\"
+ 
 -INCLUDES = @GLIB_CFLAGS@ -I$(includedir)
 -
 -bin_PROGRAMS = @DOINSTGOB@
@@ -20,7 +21,7 @@
  EXTRA_PROGRAMS = gob
  
  BUILT_SOURCES = parse.h parse.c lexer.c
-@@ -31,12 +27,12 @@
+@@ -31,12 +29,12 @@
  gob_LDADD = \
  	-lm \
  	$(GLIB_LIBS) \
