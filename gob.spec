@@ -23,11 +23,11 @@ make
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT/usr/src/examples/%{name}-%{varsion}
+install -d $RPM_BUILD_ROOT/usr/src/examples/%{name}-%{version}
 
 make DESTDIR=$RPM_BUILD_ROOT install
 
-install examples/* $RPM_BUILD_ROOT/usr/src/examples/%{name}-%{varsion}
+install examples/* $RPM_BUILD_ROOT/usr/src/examples/%{name}-%{version}
 gzip -9nf README AUTHORS NEWS TODO ChangeLog \
 	$RPM_BUILD_ROOT%{_mandir}/*/*
 
@@ -40,4 +40,4 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man1/*
 %{_datadir}/aclocal/*
-/usr/src/examples/%{name}-%{varsion}
+/usr/src/examples/%{name}-%{version}
