@@ -32,7 +32,7 @@ pewnego stopnia inspirowana Jav± i Yaccem.
 
 %build
 rm -f missing
-aclocal
+%{__aclocal}
 %{__autoconf}
 %{__automake}
 %configure
