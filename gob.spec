@@ -6,11 +6,9 @@ License:	GPL
 Group:		Development/Tools
 Group(pl):	Programowanie/Narzêdzia
 Source0:	http://ftp.5z.com/pub/gob/%{name}-%{version}.tar.gz
-Url:		http://www.5z.com/jirka/gob.html
+URL:		http://www.5z.com/jirka/gob.html
+BuildRequires:	glib-devel >= 1.2.0
 BuildRoot:	/tmp/%{name}-%{version}-root
-
-%define		_prefix		/usr/X11R6
-%define		_mandir		%{_prefix}/man
 
 %description
 GOB is a simple preprocessor for making GTK+ objects. It makes objects
